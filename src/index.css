@@ -2,104 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sive Special School design system — green & gold, deaf-accessible */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 40% 97%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sive green */
+    --primary: 137 60% 26%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 137 62% 17%;
+    --primary-light: 134 51% 36%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Gold accent */
+    --accent: 42 80% 47%;
+    --accent-foreground: 137 62% 17%;
+    --accent-light: 44 86% 60%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 137 30% 94%;
+    --secondary-foreground: 137 62% 17%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 45 20% 94%;
+    --muted-foreground: 0 0% 33%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 137 20% 88%;
+    --input: 137 20% 88%;
+    --ring: 137 60% 26%;
 
     --radius: 0.5rem;
 
+    --gradient-hero: linear-gradient(160deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 50%, hsl(137 50% 30%) 100%);
+    --gradient-gold: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --shadow-elegant: 0 20px 60px hsl(var(--primary-dark) / 0.15);
+    --shadow-gold: 0 8px 30px hsl(var(--accent) / 0.4);
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-primary: 137 60% 26%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 137 30% 94%;
+    --sidebar-accent-foreground: 137 62% 17%;
+    --sidebar-border: 137 20% 88%;
+    --sidebar-ring: 42 80% 47%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 137 30% 8%;
+    --foreground: 45 40% 95%;
+    --card: 137 30% 10%;
+    --card-foreground: 45 40% 95%;
+    --popover: 137 30% 10%;
+    --popover-foreground: 45 40% 95%;
+    --primary: 134 51% 50%;
+    --primary-foreground: 137 62% 10%;
+    --secondary: 137 30% 16%;
+    --secondary-foreground: 45 40% 95%;
+    --muted: 137 30% 16%;
+    --muted-foreground: 45 20% 70%;
+    --accent: 44 86% 60%;
+    --accent-foreground: 137 62% 10%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 137 30% 20%;
+    --input: 137 30% 20%;
+    --ring: 44 86% 60%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-foreground;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    /* Larger base for readability */
+    font-size: 16.5px;
+    line-height: 1.65;
   }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+  /* Strong focus rings for keyboard / deaf navigators */
+  :focus-visible {
+    outline: 3px solid hsl(var(--accent));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .font-display { font-family: 'Playfair Display', Georgia, serif; }
+  .font-bebas { font-family: 'Bebas Neue', Impact, sans-serif; letter-spacing: 0.02em; }
 }
