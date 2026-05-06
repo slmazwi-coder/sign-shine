@@ -234,7 +234,19 @@ export default function Index() {
           <h2 className="mb-5 font-display text-3xl text-primary-dark">Standing With Sive</h2>
           <div className="mb-8 h-1 w-16 rounded bg-gradient-gold" />
           <div className="flex flex-wrap gap-3">
-            {["Department of Basic Education", "Independent Development Trust (IDT)", "Ingwe TVET College", "Nelson Mandela University", "Maths & Science Infinity (MSI)", "TCN Architects", "Alfred Nzo District Municipality", "Local Choice Pharmacy", "Bergview", "Royal Courtyard Hotel", "Cedarville Filling Station"].map((p) => (
+            {[
+              "Department of Basic Education",
+              "Independent Development Trust (IDT)",
+              "Ingwe TVET College",
+              "Nelson Mandela University",
+              "Maths & Science Infinity (MSI)",
+              "TCN Architects",
+              "Alfred Nzo District Municipality",
+              "Local Choice Pharmacy",
+              "Bergview",
+              "Royal Courtyard Hotel",
+              "Cedarville Filling Station",
+            ].map((p) => (
               <div key={p} className="rounded-full border-2 border-primary/15 bg-card px-6 py-2.5 text-sm font-semibold text-primary-dark transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground">
                 {p}
               </div>
