@@ -22,7 +22,7 @@ export default function SiteNav() {
           <img
             src={logo}
             alt="Sive Special School crest"
-            className="h-11 w-11 rounded-full object-cover ring-2 ring-accent"
+            className="h-11 w-11 object-contain mix-blend-luminosity opacity-80"
           />
           <div className="text-primary-foreground">
             <strong className="block font-display text-base leading-tight">Sive Special School</strong>
