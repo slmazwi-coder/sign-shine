@@ -52,7 +52,7 @@ export default function Index() {
       <SiteNav />
 
       {/* HERO */}
-      <header className="relative flex min-h-screen items-center overflow-hidden bg-gradient-hero">
+      <header className="relative flex min-h-screen flex-col justify-between overflow-hidden bg-gradient-hero">
         <div
           className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 opacity-60 md:block"
           style={{
@@ -60,7 +60,8 @@ export default function Index() {
             backgroundSize: "30px 30px",
           }}
         />
-        <div className="relative z-10 max-w-3xl px-[5%] pb-32 pt-32">
+
+        <div className="relative z-10 max-w-3xl px-[5%] pb-16 pt-32">
           <div className="mb-6 inline-flex items-center gap-2 rounded border border-accent/50 bg-accent/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[3px] text-accent-light">
             <Hand className="h-3.5 w-3.5" /> {c.hero_tag}
           </div>
@@ -86,7 +87,7 @@ export default function Index() {
             >
               Apply Online <ChevronDown className="h-4 w-4 -rotate-90" />
             </Link>
-            <a
+            
               href="#about"
               className="rounded border-2 border-primary-foreground/40 px-8 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:border-accent-light hover:text-accent-light"
             >
@@ -96,7 +97,7 @@ export default function Index() {
         </div>
 
         {/* Stats bar */}
-        <div className="absolute inset-x-0 bottom-0 z-10 flex flex-wrap justify-center border-t border-accent/30 bg-black/30 backdrop-blur-md">
+        <div className="relative z-10 flex flex-wrap justify-center border-t border-accent/30 bg-black/30 backdrop-blur-md">
           {[
             ["1996", "Year Founded"],
             ["100%", "Matric Pass Rate 2024"],
@@ -284,7 +285,9 @@ export default function Index() {
                 Start an Application →
               </Link>
               <div className="mt-6 flex items-center gap-3 rounded-md border border-accent/20 bg-primary-foreground/5 p-4">
-                <img src={logo} alt="Sive Special School crest" className="h-12 w-12 rounded" />
+                <div className="shrink-0 border-2 border-accent p-[2px]">
+                  <img src={logo} alt="Sive Special School crest" className="h-12 w-12 object-contain" />
+                </div>
                 <div className="text-xs text-primary-foreground/70">
                   <strong className="text-accent-light block">EMIS Number</strong>
                   {c.contact_emis}
