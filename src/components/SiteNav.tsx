@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/sive-logo.jpg";
 
 const navItems = [
   { label: "About", href: "/#about" },
@@ -18,12 +19,11 @@ export default function SiteNav() {
     <nav className="fixed inset-x-0 top-0 z-50 h-[68px] border-b-2 border-accent bg-primary-dark/95 backdrop-blur-md">
       <div className="mx-auto flex h-full items-center justify-between px-[5%]">
         <Link to="/" className="flex items-center gap-3" aria-label="Sive Special School home">
-          <div
-            className="flex h-11 w-11 items-center justify-center bg-accent text-primary-dark"
-            style={{ clipPath: "polygon(50% 0%, 100% 20%, 100% 75%, 50% 100%, 0% 75%, 0% 20%)" }}
-          >
-            <GraduationCap className="h-5 w-5" />
-          </div>
+          <img
+            src={logo}
+            alt="Sive Special School crest"
+            className="h-11 w-11 rounded-full object-cover ring-2 ring-accent"
+          />
           <div className="text-primary-foreground">
             <strong className="block font-display text-base leading-tight">Sive Special School</strong>
             <span className="text-[0.65rem] uppercase tracking-[2px] text-accent-light">For The Deaf</span>
