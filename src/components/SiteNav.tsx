@@ -19,11 +19,11 @@ export default function SiteNav() {
     <nav className="fixed inset-x-0 top-0 z-50 h-[68px] border-b-2 border-accent bg-primary-dark/95 backdrop-blur-md">
       <div className="mx-auto flex h-full items-center justify-between px-[5%]">
         <Link to="/" className="flex items-center gap-3" aria-label="Sive Special School home">
-          <div className="shrink-0 rounded-full border-2 border-accent p-[2px]">
+          <div className="shrink-0 border-2 border-accent p-[2px]">
             <img
               src={logo}
               alt="Sive Special School crest"
-              className="h-11 w-11 rounded-full object-contain object-center"
+              className="h-11 w-11 object-contain object-center"
             />
           </div>
           <div className="text-primary-foreground">
