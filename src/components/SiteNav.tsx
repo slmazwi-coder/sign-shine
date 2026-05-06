@@ -19,11 +19,13 @@ export default function SiteNav() {
     <nav className="fixed inset-x-0 top-0 z-50 h-[68px] border-b-2 border-accent bg-primary-dark/95 backdrop-blur-md">
       <div className="mx-auto flex h-full items-center justify-between px-[5%]">
         <Link to="/" className="flex items-center gap-3" aria-label="Sive Special School home">
-          <img
-            src={logo}
-            alt="Sive Special School crest"
-            className="h-11 w-11 object-contain mix-blend-luminosity opacity-80"
-          />
+          <div className="shrink-0 rounded-full border-2 border-accent p-[2px]">
+            <img
+              src={logo}
+              alt="Sive Special School crest"
+              className="h-11 w-11 rounded-full object-contain object-center"
+            />
+          </div>
           <div className="text-primary-foreground">
             <strong className="block font-display text-base leading-tight">Sive Special School</strong>
             <span className="text-[0.65rem] uppercase tracking-[2px] text-accent-light">For The Deaf</span>
