@@ -97,7 +97,7 @@ export default function Index() {
             )}
           </h1>
           <p className="mb-8 border-l-[3px] border-accent pl-4 text-xl italic text-primary-foreground/75">
-            "{c.hero_motto}"
+            &quot;{c.hero_motto}&quot;
           </p>
           <p className="mb-10 max-w-xl text-base leading-relaxed text-primary-foreground/65">
             {c.hero_desc}
@@ -109,12 +109,12 @@ export default function Index() {
             >
               Apply Online <ChevronDown className="h-4 w-4 -rotate-90" />
             </Link>
-            <Link
-              to="/#about"
+            <a
+              href="#about"
               className="rounded border-2 border-primary-foreground/40 px-8 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:border-accent-light hover:text-accent-light"
             >
               Discover Our School
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -149,7 +149,7 @@ export default function Index() {
           </span>
           <h2 className="mb-5 font-display text-[clamp(2rem,4vw,3rem)] leading-tight text-primary-dark">
             A School Built on{" "}
-            <span className="text-primary-light">Pride, Sign & Purpose</span>
+            <span className="text-primary-light">Pride, Sign &amp; Purpose</span>
           </h2>
           <div className="mb-10 h-1 w-16 rounded bg-gradient-gold" />
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -394,7 +394,7 @@ export default function Index() {
       <section className="bg-secondary px-[5%] py-20">
         <div className="mx-auto max-w-7xl">
           <span className="mb-3 block text-xs font-semibold uppercase tracking-[4px] text-primary">
-            Partners & Supporters
+            Partners &amp; Supporters
           </span>
           <h2 className="mb-5 font-display text-3xl text-primary-dark">
             Standing With Sive
@@ -476,7 +476,7 @@ export default function Index() {
 
             <div className="rounded-xl border border-primary-foreground/10 bg-primary-foreground/[0.06] p-9">
               <h3 className="mb-3 font-display text-2xl">Ready to Apply?</h3>
-              <p className="mb-6 leading-relaxed text-primary-foreground/75">
+              <p className="mb-6 text-primary-foreground/75 leading-relaxed">
                 Submit an online application for your child to join the Sive
                 Special School family. Our admissions team will review and
                 contact you.
@@ -485,7 +485,7 @@ export default function Index() {
                 to="/apply"
                 className="block w-full rounded-md bg-accent px-6 py-4 text-center font-bold text-primary-dark transition hover:bg-accent-light"
               >
-                Start an Application
+                Start an Application &rarr;
               </Link>
               <div className="mt-6 flex items-center gap-3 rounded-md border border-accent/20 bg-primary-foreground/5 p-4">
                 <div className="shrink-0 border-2 border-accent p-[2px]">
@@ -496,7 +496,7 @@ export default function Index() {
                   />
                 </div>
                 <div className="text-xs text-primary-foreground/70">
-                  <strong className="block text-accent-light">
+                  <strong className="text-accent-light block">
                     EMIS Number
                   </strong>
                   {c.contact_emis}
