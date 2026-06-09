@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Shield, LogOut, Inbox, Users, FileText, Pencil, Plus, Trash2, Download, Check, X } from "lucide-react";
@@ -9,16 +8,24 @@ import { Shield, LogOut, Inbox, Users, FileText, Pencil, Plus, Trash2, Download,
 const inp = "w-full rounded-md border border-input bg-card px-3 py-2 text-sm outline-none focus:border-primary";
 
 export default function AdminPortal() {
-  const { user, isAdmin, loading } = useAuth();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const nav = useNavigate();
 
   useEffect(() => {
-    if (loading) return;
-    if (!user) { nav("/admin-login"); return; }
-    if (!isAdmin) { toast.error("Admin access required."); supabase.auth.signOut().then(()=>nav("/admin-login")); }
-  }, [user, isAdmin, loading, nav]);
+    const auth = sessionStorage.getItem("admin_auth");
+    if (!auth) {
+      nav("/admin-login");
+      return;
+    }
+    setIsAuthenticated(true);
+  }, [nav]);
 
-  if (loading || !isAdmin) return <div className="p-10 text-center text-muted-foreground">Loading...</div>;
+  function handleSignOut() {
+    sessionStorage.removeItem("admin_auth");
+    nav("/");
+  }
+
+  if (!isAuthenticated) return <div className="p-10 text-center text-muted-foreground">Loading...</div>;
 
   return (
     <div className="min-h-screen bg-background">
@@ -29,7 +36,7 @@ export default function AdminPortal() {
             <div><strong className="block font-display">Admin Portal</strong><span className="text-xs text-primary-foreground/70">Sive Special School</span></div>
           </div>
           <button
-            onClick={() => supabase.auth.signOut().then(() => nav("/"))}
+            onClick={handleSignOut}
             className="flex items-center gap-2 rounded bg-primary-foreground/10 px-4 py-2 text-sm text-primary-foreground hover:bg-primary-foreground/20"
           ><LogOut className="h-4 w-4" /> Sign out</button>
         </div>
